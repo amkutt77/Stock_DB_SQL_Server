@@ -81,7 +81,7 @@ with concurrent.futures.ProcessPoolExecutor() as executor:
             data = future.result()
 ```
 
-### results
+## Results
 
 When running a test on just 50 tickers over a seven year period, standard processing took 23 seconds to run. With multiprocessing, it took 7 seconds. 
 This is a 70% decrease in execution time. 
