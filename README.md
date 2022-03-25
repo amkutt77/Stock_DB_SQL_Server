@@ -51,7 +51,7 @@ for ticker in tickers:
 
 Running through 500 tickers and pulling data for a long period one at a time can take a while. A faster approach to this is through using multiprocessing.
 Instead of running through each ticker one at a time, I pull down and push data asynchronously by splitting it up among different processes. 
-Normally, Python will run a script synchronously using one processor. Multiprocessing allows the computer to utilize multiple processors concurrently so that intead
+Normally, Python will run a script synchronously using one processor. Multiprocessing allows the computer to utilize multiple processors concurrently so that instead
 I can pull and push data for multiple tickers at once.
 
 ```python
