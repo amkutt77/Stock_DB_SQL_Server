@@ -17,7 +17,7 @@ pip install pyodbc
 
 ## Usage
 
-First I created a database in SQL Server called dbo.stock_price_data.  Then, using my stockData class, I can take a list of tickers, define a time period to 
+First, I created a database in SQL Server called dbo.stock_price_data.  Then, using my stockData class, I can take a list of tickers, define a time period to 
 pull daily price data, pull down the data with the Yahoo Finance API (yFinance), and then push it to my SQL Server DB using the pyodbc package. In this case, 
 the tickers are saved down in an Excel file containing the ~500 Yahoo Finance tickers for the SP500. 
 
