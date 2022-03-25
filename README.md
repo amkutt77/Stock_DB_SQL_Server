@@ -23,7 +23,7 @@ the tickers are saved down in an Excel file containing the ~500 Yahoo Finance ti
 
 The interesting part about this script is how much faster it is to use multiprocessing vs standard processing.
 
-# Standard Processing
+### Standard Processing
 
 
 This script below is the main.py file where I loop one at a time through each ticker.
@@ -47,7 +47,7 @@ for ticker in tickers:
     my_ticker.pull_data_and_push_data(st = st, et = et)
 ```
 
-# Multiprocessing
+### Multiprocessing
 
 Running through 500 tickers and pulling data for a long period one at a time can take a while. A faster approach to this is through using multiprocessing.
 Instead of running through each ticker one at a time, I pull down and push data asynchronously by splitting it up among different processes. 
@@ -81,7 +81,7 @@ with concurrent.futures.ProcessPoolExecutor() as executor:
             data = future.result()
 ```
 
-# results
+### results
 
 When running a test on just 50 tickers over a seven year period, standard processing took 23 seconds to run. With multiprocessing, it took 7 seconds. 
 This is a 70% decrease in execution time. 
